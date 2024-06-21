@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .nav-links {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .nav-links a {
+            margin: 0 10px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .nav-links a:hover {
+            background-color: #0056b3;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+        li h3 {
+            font-size: 1.5em;
+            color: #333;
+        }
+        li p {
+            font-size: 1.2em;
+            color: #555;
+        }
+        li img {
+            max-width: 100px;
+            height: auto;
+            padding: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .total-cost {
+            font-size: 1.5em;
+            text-align: right;
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <div class="nav-links">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'cart' %}">Cart</a>
+    </div>
+    <ul>
+        {% for item in cart_items %}
+            <li>
+                <img src="{{ item.product.image }}" alt="{{ item.product.name }}">
+                <h3>{{ item.product.name }}</h3>
+                <p>Price: ${{ item.product.price }}</p>
+                <p>Quantity: {{ item.quantity }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+    <div class="total-cost">
+        Total Cost: ${{ total_cost }}
+        <br>
+        <button id="place-order-button" class="place-order-button">Place Order</button>
+    </div>
+    <script>
+        document.getElementById('place-order-button').addEventListener('click', function() {
+            alert('ORDER PLACED SUCCESSFULLY');
+        });
+    </script>
+</body>
+</html>
