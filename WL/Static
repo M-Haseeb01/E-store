@@ -1,1 +1,168 @@
 
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  #153a5b;
+    padding: 10px ;
+    margin:0px;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    color:  white;
+    margin:0px;
+}
+
+.navbar-item {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navbar-item:hover {
+    color: black;
+    transform: scale(1.1);
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    margin:0px;
+}
+
+.navbar-menu a:not(:first-child) {
+    margin-left: 20px;
+}
+
+.navbar-item {
+    padding: 5px 10px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: white;
+    margin:0px;
+}
+
+h1, h3 {
+    color: #153a5b;
+    margin: 0;
+    padding: 0;
+    margin-top: 2.23333rem;
+    font-weight: 700;
+    margin-bottom: .73333rem;
+    letter-spacing: .25px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    width: 25%;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    text-align: center; /* Center text and content */
+}
+
+li img {
+    max-width: 100%;
+    height: auto;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: block; /* Ensure image is displayed as block element */
+    margin: 0 auto; /* Center image horizontally */
+}
+
+li h3 {
+    color: #153a5b;
+    margin: 0;
+    padding: 0;
+    margin-top: 2.23333rem;
+    font-weight: 700;
+    margin-bottom: .73333rem;
+    letter-spacing: .25px;
+    text-align: center; /* Center product name */
+}
+
+li p {
+    font-size: 1rem;
+    color: #153a5b;
+    text-align: center; /* Center price */
+}
+
+.buy-now-button {
+    display: block;
+    width: 100%; /* Adjust to occupy full width of the <li> */
+    max-width: 120px; /* Limit maximum width */
+    margin: 10px auto 0; /* Center horizontally and provide top margin */
+    padding: 10px;
+    color:whitesmoke;
+    background-color: #153a5b;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.buy-now-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.clear {
+    clear: both;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #0056b3;
+}
+
+.pagination .disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.nav-links {
+    margin-bottom: 20px;
+}
+
+.nav-links a {
+    margin: 0 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #0056b3;
+}
+
